@@ -91,7 +91,7 @@ ollama-docker-models/
 
 - [Ollama Docker Hub](https://hub.docker.com/r/ollama/ollama)
 - [Ollama Model Library](https://ollama.com/library)
-- [Modelfile Reference](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
+- [Modelfile Reference](https://docs.ollama.com/modelfile)
 
 ## 📄 License
 
