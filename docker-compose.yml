@@ -1,0 +1,25 @@
+services:
+  ollama:
+    build: .
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    
+    # Uncomment for GPU support (requires NVIDIA Container Toolkit)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all  # Use all GPUs, or specify count (e.g., count: 2)
+    #           capabilities: [gpu]
+    #         # OR use device_ids to specify GPUs by ID (replace the above):
+    #         # - driver: nvidia
+    #         #   device_ids: ["0", "2"]
+    #         #   capabilities: [gpu]
+
+volumes:
+  ollama_data:
